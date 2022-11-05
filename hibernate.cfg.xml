@@ -13,11 +13,8 @@
 		<property name="show_sql">true</property>
 		
          <!-- <mapping resource="student.xml" />-->
-		<mapping class="com.hibernate.Shape" />
-        <mapping class="com.hibernate.Rectangle" />
-        <mapping class="com.hibernate.Circle" />
-
-		
-		
+          
+		<mapping class="com.hibernate.Employee" />
+		<mapping class="com.hibernate.Emp_Details" />
 	</session-factory>
 </hibernate-configuration>
