@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  
+               http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+<!--Book using constructor-org-->
+
+	<!-- creating beans for the Book class-->
+
+	<bean id="bookbean1" class="com.hibernate.Book">
+		<property name="bid" value="101"></property>
+		<property name="bname" value="java "></property>
+		<property name="bprice" value="700"></property>
+	</bean>
+
+	<bean id="bookbean2" class="com.hibernate.Book">
+		<property name="bid" value="102"></property>
+		<property name="bname" value="python"></property>
+		<property name="bprice" value="800"></property>
+	</bean>
+
+	<bean id="bookbean3" class="com.hibernate.Book">
+		<property name="bid" value="103"></property>
+		<property name="bname" value="c#"></property>
+		<property name="bprice" value="600"></property>
+	</bean>
+
+	<bean id="bookbean4" class="com.hibernate.Book">
+		<property name="bid" value="104"></property>
+		<property name="bname" value="computer"></property>
+		<property name="bprice" value="500"></property>
+	</bean>
+
+	<!-- creating beans for the Address class -->
+	<bean id="addressbean1" class="com.hibernate.Address">
+		<property name="hno" value="1697"></property>
+		<property name="area" value="sector-4"></property>
+		<property name="city" value="Rewari"></property>
+	</bean>
+
+	<bean id="addressbean2" class="com.hibernate.Address">
+		<property name="hno" value="1698"></property>
+		<property name="area" value="Sector-5"></property>
+		<property name="city" value="jaipur"></property>
+	</bean>
+
+	<!--creating beans for the Student class -->
+	<bean id="studentbean1" class="com.hibernate.Student">
+		<property name="sid" value="100"></property>
+		<property name="sname" value="Ritu"></property>
+		<property name="blist">
+			<list>
+				<ref bean="bookbean1" />
+				<ref bean="bookbean3" />
+			</list>
+		</property>
+		<property name="address">
+			<ref bean="addressbean1"></ref>
+		</property>
+	</bean>
+
+	<bean id="studentbean2" class="com.hibernate.Student">
+		<property name="sid" value="101"></property>
+		<property name="sname" value="Ritu"></property>
+		<property name="blist">
+			<list>
+				<ref bean="bookbean2" />
+				<ref bean="bookbean4" />
+			</list>
+		</property>
+		<property name="address">
+			<ref bean="addressbean1"></ref>
+		</property>
+	</bean>
+
+</beans>
