@@ -5,60 +5,51 @@ package com.hibernate;
  */
 public class Book {
 	
-private int bid;
-private String bname;
-private int price;
+	
+		//class properties
+		private int bid;
+		private String bname;
+		private double bprice;
 
+		public Book() {
+			super();
+			// TODO Auto-generated constructor stub
+		}
+		// constructor to fields
+		public Book(int bid, String bname, double bprice) {
+			super();
+			this.bid = bid;
+			this.bname = bname;
+			this.bprice = bprice;
+		}
+		// generate getter setter method
+		public int getBid() {
+			return bid;
+		}
 
-//creating costructor using fields
-public Book(int bid, String bname, int price) {
-	super();
-	this.bid = bid;
-	this.bname = bname;
-	this.price = price;
-}
+		public void setBid(int bid) {
+			this.bid = bid;
+		}
 
-//create superclass constructor
-public Book() {
-	super();
-	// TODO Auto-generated constructor stub
-}
+		public String getBname() {
+			return bname;
+		}
 
+		public void setBname(String bname) {
+			this.bname = bname;
+		}
 
-//create getter setter method
-public int getBid() {
-	return bid;
-}
+		public double getBprice() {
+			return bprice;
+		}
 
-public void setBid(int bid) {
-	this.bid = bid;
-}
+		public void setBprice(double bprice) {
+			this.bprice = bprice;
+		}
+		//generate  ToString method
+		@Override
+		public String toString() {
+			return "Book [bid=" + bid + ", bname=" + bname + ", bprice=" + bprice + "]";
+		}
 
-public String getBname() {
-	return bname;
-}
-
-public void setBname(String bname) {
-	this.bname = bname;
-}
-
-public int getPrice() {
-	return price;
-}
-
-public void setPrice(int price) {
-	this.price = price;
-}
-
-// generate to String
-
-
-@Override
-public String toString() {
-	return "Book [bid=" + bid + ", bname=" + bname + ", price=" + price + "]";
-}
-
-
-
-
-}
+	}

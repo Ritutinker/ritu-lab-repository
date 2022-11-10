@@ -8,14 +8,18 @@ import java.util.List;
     create 2 beans of Student in xml file and each student has at least 2 books.
    (use constructor or setter injection)
  */
-public class Student {
 
+public class Student {
 	private int sid;
 	private String sname;
-	private List<Book>blist;;
+	private List<Book> blist;
 	private Address address;
-	
-	//generate fields for constructor
+
+	public Student() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	//constructor using fields
 	public Student(int sid, String sname, List<Book> blist, Address address) {
 		super();
 		this.sid = sid;
@@ -23,14 +27,7 @@ public class Student {
 		this.blist = blist;
 		this.address = address;
 	}
-
-	//generate super constructor 
-	public Student() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
-
-	//generate getter setter method
+	// generate getter setter method
 	public int getSid() {
 		return sid;
 	}
@@ -62,14 +59,10 @@ public class Student {
 	public void setAddress(Address address) {
 		this.address = address;
 	}
-
-	//generate to string method
+	//to String method
 	@Override
 	public String toString() {
 		return "Student [sid=" + sid + ", sname=" + sname + ", blist=" + blist + ", address=" + address + "]";
 	}
-	
-	
-	
-	
+
 }
