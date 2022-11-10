@@ -8,72 +8,73 @@
 
 <!--Book using constructor-org-->
 
-	<!-- creating beans for the Book class-->
+	<!-- creating beans1 for the Book class-->
 
 	<bean id="bookbean1" class="com.hibernate.Book">
-		<property name="bid" value="101"></property>
-		<property name="bname" value="java "></property>
-		<property name="bprice" value="700"></property>
+		<constructor-arg  name="bid" value="100"/>
+		<constructor-arg  name="bname" value="java "></constructor-arg >
+		<constructor-arg  name="bprice" value="700"></constructor-arg >
 	</bean>
-
+<!-- creating beans2 for the Book class -->
 	<bean id="bookbean2" class="com.hibernate.Book">
-		<property name="bid" value="102"></property>
-		<property name="bname" value="python"></property>
-		<property name="bprice" value="800"></property>
+		<constructor-arg  name="bid" value="102"></constructor-arg >
+		<constructor-arg  name="bname" value="python"></constructor-arg >
+		<constructor-arg  name="bprice" value="800"></constructor-arg >
 	</bean>
-
+<!-- creating beans3 for the Book class -->
 	<bean id="bookbean3" class="com.hibernate.Book">
-		<property name="bid" value="103"></property>
-		<property name="bname" value="c#"></property>
-		<property name="bprice" value="600"></property>
+		<constructor-arg  name="bid" value="103"></constructor-arg >
+		<constructor-arg  name="bname" value="c#"></constructor-arg >
+		<constructor-arg  name="bprice" value="600"></constructor-arg >
 	</bean>
-
+<!-- creating beans4 for the Book class -->
 	<bean id="bookbean4" class="com.hibernate.Book">
-		<property name="bid" value="104"></property>
-		<property name="bname" value="computer"></property>
-		<property name="bprice" value="500"></property>
+		<constructor-arg  name="bid" value="104"></constructor-arg >
+		<constructor-arg  name="bname" value="computer"></constructor-arg >
+		<constructor-arg  name="bprice" value="500"></constructor-arg >
 	</bean>
 
-	<!-- creating beans for the Address class -->
+	<!-- creating beans1 for the Address class -->
 	<bean id="addressbean1" class="com.hibernate.Address">
-		<property name="hno" value="1697"></property>
-		<property name="area" value="sector-4"></property>
-		<property name="city" value="Rewari"></property>
+		<constructor-arg  name="hno" value="1697"></constructor-arg >
+		<constructor-arg  name="area" value="sector-4"></constructor-arg >
+		<constructor-arg  name="city" value="Rewari"></constructor-arg >
 	</bean>
-
+<!-- creating beans2 for the Address class -->
 	<bean id="addressbean2" class="com.hibernate.Address">
-		<property name="hno" value="1698"></property>
-		<property name="area" value="Sector-5"></property>
-		<property name="city" value="jaipur"></property>
+		<constructor-arg  name="hno" value="1698"></constructor-arg >
+		<constructor-arg  name="area" value="Sector-5"></constructor-arg >
+		<constructor-arg  name="city" value="jaipur"></constructor-arg >
 	</bean>
 
-	<!--creating beans for the Student class -->
+	<!--creating beans 1 for the Student class -->
 	<bean id="studentbean1" class="com.hibernate.Student">
-		<property name="sid" value="100"></property>
-		<property name="sname" value="Ritu"></property>
-		<property name="blist">
+		<constructor-arg  name="sid" value="100"></constructor-arg >
+		<constructor-arg  name="sname" value="Ritu"></constructor-arg >
+		<constructor-arg  name="blist">
 			<list>
 				<ref bean="bookbean1" />
-				<ref bean="bookbean3" />
+				<ref bean="bookbean2" />
 			</list>
-		</property>
-		<property name="address">
+		</constructor-arg >
+		<constructor-arg  name="address">
 			<ref bean="addressbean1"></ref>
-		</property>
+		</constructor-arg >
 	</bean>
 
+<!--creating beans 2 for the Student class -->
 	<bean id="studentbean2" class="com.hibernate.Student">
-		<property name="sid" value="101"></property>
-		<property name="sname" value="Ritu"></property>
-		<property name="blist">
+		<constructor-arg  name="sid" value="101"></constructor-arg >
+		<constructor-arg  name="sname" value="Rudhra"></constructor-arg >
+		<constructor-arg  name="blist">
 			<list>
-				<ref bean="bookbean2" />
+				<ref bean="bookbean3" />
 				<ref bean="bookbean4" />
 			</list>
-		</property>
-		<property name="address">
+		</constructor-arg >
+		<constructor-arg  name="address">
 			<ref bean="addressbean1"></ref>
-		</property>
+		</constructor-arg >
 	</bean>
 
 </beans>
